@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="142dp"
+    android:height="20dp"
+    android:viewportWidth="142"
+    android:viewportHeight="20">
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M25.2 0h-3.38v16.92h3.38V0Z"/>
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M17.93 0.95h-3.38v16.92h3.38V0.95Z"/>
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M10.66 2H7.27v16.93h3.39V2Z"/>
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M3.38 3.07H0V20h3.38V3.07Z"/>
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M114.6 9.02l-5.45-5.98h-3.19v13.83h3.33V8.05l4.97 5.23h0.62l4.89-5.23v8.82h3.33V3.04h-3.19l-5.31 5.98Z"/>
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M138.94 3.04l-8.24 9v-9h-3.33v13.83h3.05l8.25-8.99v9h3.32V3.03h-3.05Z"/>
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M88.05 8.1c0 2.2 1.22 3.94 3.1 4.67l-3.52 4.1h4.07l3.2-3.73h3.46v3.73h3.32V3.04h-8.47c-3.15 0-5.16 2.13-5.16 5.06Zm10.3-2.01v4.09h-4.52c-1.5 0-2.32-0.83-2.32-2.05 0-1.22 0.84-2.05 2.32-2.05h4.53Z"/>
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M72.59 5.8c-0.2 4.77-1.22 7.84-3.22 7.84h-0.5v3.32l0.54 0.02c4 0.22 6.2-3.23 6.56-10.78h5.26v10.67h3.32V3.04H72.7l-0.11 2.77Z"/>
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M60.07 2.85c-4.5 0-7.74 3.07-7.74 7.1 0 4.18 3.52 7.15 7.74 7.15 4.38 0 7.8-3.13 7.8-7.14s-3.42-7.11-7.8-7.11Zm0 10.93c-2.55 0-4.28-1.64-4.28-3.82 0-2.24 1.73-3.83 4.28-3.83 2.54 0 4.33 1.66 4.33 3.83 0 2.16-1.82 3.82-4.33 3.82Z"/>
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M48.8 3.07H37.06l-0.11 2.76c-0.17 3.99-1.22 7.78-3.22 7.83l-0.92 0.03V20h3.36v-3.12h11.65v3.11h3.39v-6.33h-2.4V3.06Zm-3.33 10.6h-7.1c1.2-1.8 1.85-4.4 1.96-7.45h5.14v7.44Z"/>
+</vector>

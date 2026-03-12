@@ -1,0 +1,27 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application
+        android:allowBackup="true"
+        android:usesCleartextTraffic="true">
+
+    <activity
+            android:name=".ui.PaymentActivity"
+            android:theme="@style/cpsdk_AcquiringTheme"
+            android:windowSoftInputMode="adjustResize"
+            android:launchMode="singleInstance"
+            android:exported="true">
+
+            <intent-filter android:label="Run CP SDK">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="cloudpayments"
+                    android:host="${cpSdkHost}" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="cp_sdk_host"
+            android:value="${cpSdkHost}" />
+    </application>
+</manifest>

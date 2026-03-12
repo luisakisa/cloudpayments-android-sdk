@@ -1,0 +1,114 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
+    id 'com.google.devtools.ksp'
+    id("org.jetbrains.kotlin.plugin.compose") version "2.2.20"
+    id("org.jetbrains.kotlin.plugin.serialization") version "2.2.20"
+}
+
+android {
+    compileSdk 36
+
+    defaultConfig {
+        minSdkVersion 24
+        targetSdkVersion 34
+        multiDexEnabled false
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    viewBinding {
+        enabled = true
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            consumerProguardFiles 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            consumerProguardFiles 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.5.2'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_17.toString()
+    }
+    namespace 'ru.cloudpayments.sdk'
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:2.2.20"
+    implementation 'androidx.core:core-ktx:1.17.0'
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0"
+
+    implementation 'com.google.android.material:material:1.13.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    implementation 'androidx.fragment:fragment-ktx:1.8.9'
+    implementation 'androidx.arch.core:core-runtime:2.2.0'
+    implementation 'androidx.work:work-runtime-ktx:2.10.5'
+
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+    implementation "com.squareup.retrofit2:retrofit:3.0.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:3.0.0"
+    implementation "com.squareup.retrofit2:converter-gson:3.0.0"
+    implementation "com.squareup.okhttp3:okhttp:5.2.1"
+    implementation "com.squareup.okhttp3:logging-interceptor:5.2.1"
+
+    implementation 'ru.tinkoff.decoro:decoro:1.7.0'
+
+    implementation 'org.jsoup:jsoup:1.21.2'
+
+    // rxkotlin
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.4.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+    implementation 'com.google.android.gms:play-services-wallet:19.5.0'
+
+    //Multidex support
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // dagger2
+    implementation "com.google.dagger:dagger:2.57.2"
+    implementation "com.google.dagger:dagger-android:2.57.2"
+    implementation "com.google.dagger:dagger-android-support:2.57.2"
+
+    // ПАТЧ: Используем Compose BOM для совместимости
+    def composeBomVersion = '2024.09.02'
+    implementation platform("androidx.compose:compose-bom:$composeBomVersion")
+    implementation 'androidx.compose.ui:ui'
+    implementation 'androidx.compose.ui:ui-android'
+    implementation 'androidx.compose.material3:material3'
+    implementation 'androidx.compose.foundation:foundation'
+
+    ksp "com.google.dagger:dagger-compiler:2.57.2"
+    ksp "com.google.dagger:dagger-android-processor:2.57.2"
+
+    //rx google-play-services
+    implementation 'io.ashdavies.rx.rxtasks:rx-tasks:2.2.0'
+
+    implementation("io.coil-kt:coil-compose:2.7.0")
+}
